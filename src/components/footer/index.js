@@ -51,6 +51,7 @@ function Footer() {
             target="_blank"
             referrerPolicy="no-referrer"
             href="https://achi.net/newsroom/house-passes-bill-extending-aca-subsidies-through-2025-ensuring-continued-affordable-healthcare-insurance-for-millions/?"
+            rel="noreferrer"
           >
             ACHI 2022{" "}
           </a>
@@ -59,6 +60,7 @@ function Footer() {
             target="_blank"
             referrerPolicy="no-referrer"
             href="https://www.kff.org/faqs/faqs-health-insurance-marketplace-and-the-aca/how-do-the-premium-tax-credits-work/"
+            rel="noreferrer"
           >
             KFF 2022{" "}
           </a>{" "}
@@ -67,6 +69,7 @@ function Footer() {
             target="_blank"
             referrerPolicy="no-referrer"
             href="https://www.irs.gov/affordable-care-act/individuals-and-families/the-premium-tax-credit-the-basics"
+            rel="noreferrer"
           >
             IRS 2022{" "}
           </a>{" "}
@@ -75,6 +78,7 @@ function Footer() {
             target="_blank"
             referrerPolicy="no-referrer"
             href="https://www.healthreformbeyondthebasics.org/premium-tax-credits-answers-to-frequently-asked-questions/"
+            rel="noreferrer"
           >
             Health Reform Basics 2022
           </a>{" "}
@@ -82,8 +86,8 @@ function Footer() {
           <a
             target="_blank"
             referrerPolicy="no-referrer"
-            a
             href="https://cms.gov"
+            rel="noreferrer"
           >
             CMS.gov
           </a>
@@ -93,6 +97,7 @@ function Footer() {
             target="_blank"
             referrerPolicy="no-referrer"
             href="https://chat.healthbenefitsnow.org/privacy_policy/index.html"
+            rel="noreferrer"
           >
             Privacy Policy
           </a>{" "}
@@ -101,6 +106,7 @@ function Footer() {
             target="_blank"
             referrerPolicy="no-referrer"
             href="https://chat.healthbenefitsnow.org/terms_of_service/index.html"
+            rel="noreferrer"
           >
             Terms and Conditions
           </a>
