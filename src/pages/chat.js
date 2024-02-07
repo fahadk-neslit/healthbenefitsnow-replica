@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-eval */
 import React, { useEffect, useState } from "react";
 import { RobotQuestions } from "../utils/ChatObject";
 import { toTitleCase } from "../utils/Helper";
