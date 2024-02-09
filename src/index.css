@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing: border-box;
+}
 .blinking-dot::before {
   -webkit-animation: pulse-ring 1s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
   animation: pulse-ring 1s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;

@@ -4,7 +4,9 @@ import Chat from "./pages/chat";
 function App() {
   return (
     <>
-      <Chat />
+      <div className="min-h-[100vh]">
+        <Chat />
+      </div>
       <Footer />
     </>
   );

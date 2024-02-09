@@ -101,7 +101,7 @@ function Chat() {
   };
 
   return (
-    <div className="flex flex-col items-center text-textGrey p-[16px] gap-[3px]">
+    <div className="flex flex-col items-center text-textGrey p-[16px] gap-[3px] overflow-hidden">
       <p className="font-[600] font-serif">
         Offices Close Today at 8:00 PM EST
       </p>
@@ -113,11 +113,11 @@ function Chat() {
         <div className="blinking-dot"></div>
         <p className="font-[200] text-[0.9rem]">Emily is Online.</p>
       </div>
-      <div className="flex flex-col gap-2 items-start mt-2">
+      <div className="flex flex-col gap-2 items-center mt-2 w-full ml-10">
         {robotChatMessages.map((chat, index) => {
           return (
-            <div className="flex flex-row" key={index}>
-              <div className="w-[60px] h-[60px]  justify-center items-center">
+            <div className="flex flex-row items-center" key={index}>
+              <div className="w-[35px] h-[35px]  justify-center items-center mr-[0.75rem]">
                 {(index === robotChatMessages?.length - 1 ||
                   robotChatMessages[index + 1]?.role === "user") && (
                   <img
@@ -125,7 +125,7 @@ function Chat() {
                     alt="emily"
                     height={35}
                     width={35}
-                    className="rounded-full"
+                    className="rounded-full object-cover"
                   />
                 )}
               </div>
@@ -137,22 +137,26 @@ function Chat() {
                 <div
                   className={`${
                     chat?.role === "robot"
-                      ? "bg-lightGrey"
-                      : "bg-primary text-white"
-                  } rounded-lg p-3 max-w-[274px] flex items-center`}
+                      ? "bg-lightGrey text-textGrey"
+                      : "bg-primary text-white my-1"
+                  } rounded-lg p-[12px] max-w-[274px] flex items-center`}
                 >
                   {index === robotChatMessages?.length - 1 &&
                   isTyping &&
                   !chat?.response ? (
                     <div>{typingSkeleton()}</div>
                   ) : chat?.type === "text" && chat?.type !== "input" ? (
-                    <p className="text-[1rem]">
+                    <p className="text-[1rem] leading-tight ">
                       {chat?.role === "user"
                         ? toTitleCase(chat?.text)
                         : chat?.text}
                     </p>
                   ) : (
-                    <div className="gap-[16px] flex flex-wrap justify-center items-center">
+                    <div
+                      className={`gap-[16px] p-[8px] flex  ${
+                        chat?.inputs?.length > 2 ? " flex-col " : " flex-row "
+                      } justify-center items-center`}
+                    >
                       {chat?.inputs?.map((input) => (
                         <button
                           onClick={() => {
@@ -162,7 +166,7 @@ function Chat() {
                               handleResponse(chat?.id, input?.value);
                             }
                           }}
-                          className={`cursor-pointer bg-primary text-white p-3 ${
+                          className={`cursor-pointer bg-primary text-white px-3 py-[0.6rem] ${
                             chat?.inputs?.length > 2
                               ? "min-w-[150px]"
                               : " min-w-[100px]"
@@ -175,7 +179,7 @@ function Chat() {
                   )}
                 </div>
                 {chat?.role === "user" && (
-                  <div className="w-[35px] h-[60px] ml-2 flex justify-end items-center ">
+                  <div className="w-[35px] h-[35px] my-2 ml-2 flex justify-end items-center ">
                     <img
                       src="./images/user.png"
                       height="100%"
@@ -186,7 +190,7 @@ function Chat() {
                   </div>
                 )}
               </div>
-              <div className="w-[60px]  h-[60px] flex justify-center items-center">
+              {/* <div className="w-[60px]  h-[60px] flex justify-center items-center">
                 {chat?.type === "reply" && (
                   <img
                     src="./images/emily.webp"
@@ -196,7 +200,7 @@ function Chat() {
                     className="rounded-full"
                   />
                 )}
-              </div>
+              </div> */}
             </div>
           );
         })}
