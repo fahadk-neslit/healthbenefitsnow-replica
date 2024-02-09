@@ -101,7 +101,7 @@ function Chat() {
   };
 
   return (
-    <div className="flex flex-col items-center text-textGrey p-[16px] gap-[3px] overflow-hidden">
+    <div className="flex flex-col items-center text-textGrey p-[16px] gap-[3px] ">
       <p className="font-[600] font-serif">
         Offices Close Today at 8:00 PM EST
       </p>
@@ -113,7 +113,7 @@ function Chat() {
         <div className="blinking-dot"></div>
         <p className="font-[200] text-[0.9rem]">Emily is Online.</p>
       </div>
-      <div className="flex flex-col gap-2 items-center mt-2 w-full ml-10">
+      <div className="flex flex-col gap-2 items-center mt-2 w-full ">
         {robotChatMessages.map((chat, index) => {
           return (
             <div className="flex flex-row items-center" key={index}>
